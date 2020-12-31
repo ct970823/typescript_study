@@ -1,0 +1,23 @@
+{
+  /*
+    tsconfig.json 是ts编译器的配置文件，ts编译器可以根据他的信息来对代码进行编译
+    "include" 用来指定那些ts文件需要被编译  **表示任意目录 *表示任意文件
+    "exclude" 用来指定那些ts文件不需要需要被编译
+    "extends" 定义被继承的配置文件
+    "files" 指定被编译文件的列表
+  */
+  "include": [
+    "./src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "extends": "./tsconfig.json",
+  "files": ["app.ts"],
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "sourceMap": true
+  }
+
+}
