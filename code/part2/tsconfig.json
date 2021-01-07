@@ -14,9 +14,41 @@
   ],
   "extends": "./tsconfig.json",
   "files": ["app.ts"],
+  /*
+    编译器的选项
+  */
   "compilerOptions": {
+    // 指定要使用的模块化的标准
     "module": "commonjs",
+    // target用来指定ts编译器编译为es的版本
     "target": "es5",
+    // 指定项目中要使用的库 一般不需要改
+    // "lib": [],
+    // 指定编译后文件所在的目录
+    "outDir": "./dist",
+    // 将代码合并成一个文件
+    // 社会outFile后，所以全局作用域中的代码会合并到同一个文件中
+    // "outFile": "./dist/app.js",
+    // 是否对js文件进行编译，默认是false
+    "allowJs": false,
+    // 是否检查代码符合规范 默认是false
+    "checkJs": false,
+    // 是否移除注释 默认是false
+    "removeComments": false,
+    // 不生成编译后的文件 默认为false
+    "noEmit": false,
+    // 当有错误是不生成编译后的文件  默认是false
+    "noEmitOnError": false,
+    // 所有严格检查的总开关 ，建议设置为true
+    "strict": false,
+    // 用来设置编译后的文件是否使用严格模式 默认是false
+    "alwaysStrict": false,
+    // 不允许隐式的any类型
+    "noImplicitAny": false,
+    // 不允许不明确类型的this
+    "noImplicitThis": false,
+    // 严格检查空值
+    "strictNullChecks": false,
     "sourceMap": true
   }
 
